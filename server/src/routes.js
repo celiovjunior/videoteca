@@ -1,8 +1,10 @@
 const express = require('express');
 const routes = express.Router();
-const VideoController = require('./controllers/VideoController')
+const VideoController = require('./controllers/VideoController');
+const VideoMiddleware = require('./middlewares/VideoMiddleware');
 
 routes.get('/videos', VideoController.index);
 routes.post('/videos', VideoController.store);
+routes.put('/videos/:id', VideoMiddleware.validateId, VideoController.update);
 
 module.exports = routes;

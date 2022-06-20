@@ -40,5 +40,26 @@ module.exports = {
       response.status(400).json({ error: err.message });
 
     }
+  },
+
+  async update(request, response) {  
+    try {
+      const { id } = request.params;
+      const { title, link } = request.body;
+  
+      const video = await Video.findById(id);
+  
+      if(!video) {
+        return response.status(404).json();
+      }
+  
+      await video.updateOne({ title, link })
+  
+      return response.status(200).json();
+
+    } catch (error) {
+      response.status(500).json({ error: err.message })
+    }
   }
+
 };
