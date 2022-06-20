@@ -60,6 +60,31 @@ module.exports = {
     } catch (error) {
       response.status(500).json({ error: err.message })
     }
+  },
+
+  async delete(request, response) {
+    try {
+
+      await response.video.remove();
+      return response.status(200).json({ message: "Video deleted." });
+
+    } catch (error) {
+      return response.status(500).json({ error: error.message})
+    }
+  },
+
+  async updateLike(request, response) {
+    // shuffle do valor 
+    response.video.liked = !response.video.liked;
+
+    try {
+      await response.video.save();
+
+      return response.status(200).json({ message: `Video ${response.video.liked ? "liked" : "unliked"} succesfully` });
+
+    } catch (error) {
+      response.status(400).json({ error: err.message })
+    }
   }
 
 };
