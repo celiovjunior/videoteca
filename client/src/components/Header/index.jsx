@@ -1,8 +1,11 @@
 import React from 'react';
+import { Container } from './styles';
 
 function Header () {
   return(
-    <header>header aqui</header>
+    <Container>
+      <h3>Videoteca</h3>
+    </Container>
   )
 }
 

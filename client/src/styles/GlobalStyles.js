@@ -6,7 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    font-family: 'Segoe UI', 'Helvetica', sans-serif;
+    font-family: 'Noto Sans','Segoe UI', 'Helvetica', sans-serif;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
