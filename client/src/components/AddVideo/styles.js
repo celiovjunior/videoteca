@@ -21,4 +21,8 @@ export const AddVideoButton = styled.button`
 
 `;
 
-export const AddIcon = styled.div``;
+export const AddIcon = styled(IoAdd)`
+  stroke: #FFFFFF;
+  width: 64px;
+  height: 64px;
+`;
