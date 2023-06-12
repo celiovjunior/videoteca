@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Enviar video</title>
+</head>
+<body>
+    <h1>Preencha o formulário a seguir para cadastrar um novo vídeo:</h1>
+    <form action="/novo-video.php" method="post">
+        
+        <label for="url">Url do vídeo:</label>
+        <input type="url" name="url">
+
+        <label for="title">Título do vídeo:</label>
+        <input type="text" name="title" id="title">
+
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
