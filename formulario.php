@@ -30,7 +30,7 @@ if ($id !== false) {
 </head>
 <body>
     <h1>Preencha o formulário a seguir para cadastrar um novo vídeo:</h1>
-    <form action=<?= $id !== false ? '/editar-video.php?id=' . $id : '/novo-video.php'; ?> method="post">
+    <form  method="post">
 
         <label for="url">Url do vídeo:</label>
         <input type="url" name="url" value="<?= $video['url']; ?>">
