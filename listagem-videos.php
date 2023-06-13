@@ -2,20 +2,13 @@
     $dbPath = __DIR__ . '/banco.sqlite';
     $pdo = new PDO("sqlite:$dbPath");
     $videoList = $pdo->query("SELECT * FROM videos;")->fetchAll(PDO::FETCH_ASSOC);
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Videoteca</title>
-</head>
-<body>
+?>
+<?php require_once "open-html.php"; ?><body>
     <h1>olá mundo!</h1>
     <h2>Bem vindo ao <b>Videoteca</b></h2>
     <nav>
         <ul>
-            <li><a href="./pages/enviar-video.html">Criar registro</a></li>
+            <li><a href="./novo-video">Criar registro</a></li>
             <li><a href="./pages/lista-video.html">Ver lista</a></li>
         </ul>
     </nav>
@@ -38,5 +31,4 @@
             <?php endforeach; ?>
         </ul>
     </section>
-</body>
-</html>
+<?php require_once "close-html.php"; ?>

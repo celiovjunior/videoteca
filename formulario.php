@@ -10,7 +10,7 @@ $video = [
     'title' => '',
 ];
 
-if ($id !== false) {
+if ($id !== false && $id !== null) {
     $statement = $pdo->prepare("SELECT * FROM videos WHERE id = ?;");
     $statement->bindValue(1, $id, PDO::PARAM_INT);
     $statement->execute();
@@ -20,14 +20,7 @@ if ($id !== false) {
     $video = $statement->fetch(PDO::FETCH_ASSOC);
 }
 
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Enviar video</title>
-</head>
+?><?php require_once "open-html.php"; ?>
 <body>
     <h1>Preencha o formulário a seguir para cadastrar um novo vídeo:</h1>
     <form  method="post">
@@ -40,5 +33,5 @@ if ($id !== false) {
 
         <input type="submit" value="Cadastrar">
     </form>
-</body>
-</html>
+    <?php require_once "close-html.php"; ?>
+
