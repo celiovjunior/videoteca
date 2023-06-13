@@ -9,8 +9,10 @@ $url = filter_input(INPUT_POST, 'url', FILTER_VALIDATE_URL);
 $title = filter_input(INPUT_POST, 'title');
 
 if ($url === false || $title === false) {
-    header("Location: /?sucsess=0");
+    header("Location: /?success=0");
     exit();
+} else {
+    header("Location: /?success=1");
 }
 
 $statement->bindValue(1, $url);
