@@ -1,11 +1,3 @@
-<?php
-use Videoteca\Mvc\Repository\VideoRepository;
-    $dbPath = __DIR__ . '/banco.sqlite';
-    $pdo = new PDO("sqlite:$dbPath");
-
-    $repository = new VideoRepository($pdo);
-    $videoList = $repository->all();
-?>
 <?php require_once "open-html.php"; ?><body>
     <h1>olá mundo!</h1>
     <h2>Bem vindo ao <b>Videoteca</b></h2>

@@ -21,10 +21,9 @@ if ($id !== false && $id !== null) {
 }
 
 ?><?php require_once "open-html.php"; ?>
-<body>
+    <body>
     <h1>Preencha o formulário a seguir para cadastrar um novo vídeo:</h1>
     <form  method="post">
-
         <label for="url">Url do vídeo:</label>
         <input type="url" name="url" value="<?= $video['url']; ?>">
 
@@ -33,5 +32,4 @@ if ($id !== false && $id !== null) {
 
         <input type="submit" value="Cadastrar">
     </form>
-    <?php require_once "close-html.php"; ?>
-
+<?php require_once "close-html.php"; ?>
