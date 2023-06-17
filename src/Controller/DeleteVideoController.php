@@ -1,6 +1,6 @@
 <?php
 
-namespace Videoteca\Mvc\DeleteVideoController;
+namespace Videoteca\Mvc\Controller;
 use Videoteca\Mvc\Repository\VideoRepository;
 
 class DeleteVideoController

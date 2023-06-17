@@ -1,6 +1,6 @@
 <?php
 
-namespace Videoteca\Mvc\VideoFormController;
+namespace Videoteca\Mvc\Controller;
 use Videoteca\Mvc\Entity\Video;
 use Videoteca\Mvc\Repository\VideoRepository;
 
@@ -30,6 +30,6 @@ class VideoFormController
 
                 <input type="submit" value="Cadastrar">
             </form>
-        <? require_once __DIR__ . '/../../close-html.php';
+        <?php require_once __DIR__ . '/../../close-html.php';
     }
 }

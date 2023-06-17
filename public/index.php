@@ -1,10 +1,11 @@
 <?php
 use Videoteca\Mvc\Controller\VideoListController;
-use Videoteca\Mvc\DeleteVideoController\DeleteVideoController;
-use Videoteca\Mvc\EditVideoController\EditVideoController;
-use Videoteca\Mvc\NewVideoController\NewVideoController;
+use Videoteca\Mvc\Controller\DeleteVideoController;
+use Videoteca\Mvc\Controller\EditVideoController;
+use Videoteca\Mvc\Controller\Error404Controller;
+use Videoteca\Mvc\Controller\NewVideoController;
 use Videoteca\Mvc\Repository\VideoRepository;
-use Videoteca\Mvc\VideoFormController\VideoFormController;
+use Videoteca\Mvc\Controller\VideoFormController;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 // empty($_SERVER["PATH_INFO"])
@@ -15,7 +16,6 @@ $videoRepository = new VideoRepository($pdo);
 
 if (!array_key_exists("PATH_INFO", $_SERVER) || $_SERVER["PATH_INFO"] === "/") {
     $controller = new VideoListController($videoRepository);
-    $controller->requestProcess();
 } elseif ($_SERVER["PATH_INFO"] === "/novo-video") {
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $controller = new VideoFormController($videoRepository);
@@ -31,5 +31,6 @@ if (!array_key_exists("PATH_INFO", $_SERVER) || $_SERVER["PATH_INFO"] === "/") {
 } elseif ($_SERVER["PATH_INFO"] === "/remover-video") {
     $controller = new DeleteVideoController($videoRepository);
 } else {
-    http_response_code(404);
+    $controller = new Error404Controller();
 }
+$controller->requestProcess();

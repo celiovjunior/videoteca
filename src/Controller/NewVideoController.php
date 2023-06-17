@@ -1,6 +1,6 @@
 <?php
 
-namespace Videoteca\Mvc\NewVideoController;
+namespace Videoteca\Mvc\Controller;
 use Videoteca\Mvc\Entity\Video;
 use Videoteca\Mvc\Repository\VideoRepository;
 
