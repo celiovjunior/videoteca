@@ -20,8 +20,14 @@ $httpMethod = $_SERVER["REQUEST_METHOD"];
 
 $routes = require_once __DIR__ . "../../config/routes.php";
 
-$controllerClass = $routes["$httpMethod|$pathInfo"];
+
+$key = "$httpMethod|$pathInfo";
+if (array_key_exists($key, $routes)) {
+    $controllerClass = $routes["$httpMethod|$pathInfo"];
+    $controller = new $controllerClass($videoRepository);
+} else {
+    $controller = new Error404Controller();
+}
 
 /** @var IController $controller */
-$controller = new $controllerClass($videoRepository);
 $controller->requestProcess();
