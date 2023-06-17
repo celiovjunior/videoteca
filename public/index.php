@@ -1,4 +1,6 @@
 <?php
+
+use Videoteca\Mvc\Controller\IController;
 use Videoteca\Mvc\Controller\VideoListController;
 use Videoteca\Mvc\Controller\DeleteVideoController;
 use Videoteca\Mvc\Controller\EditVideoController;
@@ -13,6 +15,8 @@ require_once __DIR__ . "/../vendor/autoload.php";
 $dbPath = __DIR__ . '/../banco.sqlite';
 $pdo = new PDO("sqlite:$dbPath");
 $videoRepository = new VideoRepository($pdo);
+
+/** @var IController $controller */
 
 if (!array_key_exists("PATH_INFO", $_SERVER) || $_SERVER["PATH_INFO"] === "/") {
     $controller = new VideoListController($videoRepository);

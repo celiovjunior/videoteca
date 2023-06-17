@@ -4,7 +4,7 @@ namespace Videoteca\Mvc\Controller;
 use Videoteca\Mvc\Entity\Video;
 use Videoteca\Mvc\Repository\VideoRepository;
 
-class EditVideoController
+class EditVideoController implements IController
 {
     public function __construct(private VideoRepository $videoRepository) {}
 

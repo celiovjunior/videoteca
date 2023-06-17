@@ -3,7 +3,7 @@
 namespace Videoteca\Mvc\Controller;
 use Videoteca\Mvc\Repository\VideoRepository;
 
-class DeleteVideoController
+class DeleteVideoController implements IController
 {
     public function __construct(private VideoRepository $videoRepository) {}
 
