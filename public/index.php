@@ -1,7 +1,10 @@
 <?php
-use Videoteca\Mvc\Controller\VideoInsertController;
 use Videoteca\Mvc\Controller\VideoListController;
+use Videoteca\Mvc\DeleteVideoController\DeleteVideoController;
+use Videoteca\Mvc\EditVideoController\EditVideoController;
+use Videoteca\Mvc\NewVideoController\NewVideoController;
 use Videoteca\Mvc\Repository\VideoRepository;
+use Videoteca\Mvc\VideoFormController\VideoFormController;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 // empty($_SERVER["PATH_INFO"])
@@ -15,18 +18,18 @@ if (!array_key_exists("PATH_INFO", $_SERVER) || $_SERVER["PATH_INFO"] === "/") {
     $controller->requestProcess();
 } elseif ($_SERVER["PATH_INFO"] === "/novo-video") {
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
-        require_once __DIR__ . "/../formulario.php";
+        $controller = new VideoFormController($videoRepository);
     } elseif ($_SERVER["REQUEST_METHOD"] === "POST") {
-        require_once __DIR__ . "/../novo-video.php";
+        $controller = new NewVideoController($videoRepository);
     }
 } elseif ($_SERVER["PATH_INFO"] === "/editar-video") {
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
-        require_once __DIR__ . "/../formulario.php";
+        $controller = new VideoFormController($videoRepository);
     } elseif ($_SERVER["REQUEST_METHOD"] === "POST") {
-        require_once __DIR__ . "/../editar-video.php";
+        $controller = new EditVideoController($videoRepository);
     }
 } elseif ($_SERVER["PATH_INFO"] === "/remover-video") {
-    require_once __DIR__ . "/../remover-video.php";
+    $controller = new DeleteVideoController($videoRepository);
 } else {
     http_response_code(404);
 }
