@@ -38,6 +38,5 @@ class VideoListController
             </ul>
         </section>
         <?php require_once __DIR__ . "/../../close-html.php";
-
     }
 }

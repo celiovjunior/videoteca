@@ -17,5 +17,4 @@ if ($url === false || $title === false) {
 
 $statement->bindValue(1, $url);
 $statement->bindValue(2, $title);
-
 $statement->execute();

@@ -62,4 +62,11 @@ class VideoRepository
             $videoList
         );
     }
+
+    public function find(int $id)
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM videos WHERE id = ?;");
+        $statement->bindValue(1, $id, PDO::PARAM_INT);
+        $statement->execute();
+    }
 }

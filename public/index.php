@@ -1,4 +1,5 @@
 <?php
+use Videoteca\Mvc\Controller\VideoInsertController;
 use Videoteca\Mvc\Controller\VideoListController;
 use Videoteca\Mvc\Repository\VideoRepository;
 
