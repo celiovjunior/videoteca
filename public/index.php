@@ -15,26 +15,13 @@ require_once __DIR__ . "/../vendor/autoload.php";
 $dbPath = __DIR__ . '/../banco.sqlite';
 $pdo = new PDO("sqlite:$dbPath");
 $videoRepository = new VideoRepository($pdo);
+$pathInfo = $_SERVER["PATH_INFO"] ?? '/';
+$httpMethod = $_SERVER["REQUEST_METHOD"];
+
+$routes = require_once __DIR__ . "../../config/routes.php";
+
+$controllerClass = $routes["$httpMethod|$pathInfo"];
 
 /** @var IController $controller */
-
-if (!array_key_exists("PATH_INFO", $_SERVER) || $_SERVER["PATH_INFO"] === "/") {
-    $controller = new VideoListController($videoRepository);
-} elseif ($_SERVER["PATH_INFO"] === "/novo-video") {
-    if ($_SERVER["REQUEST_METHOD"] === "GET") {
-        $controller = new VideoFormController($videoRepository);
-    } elseif ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $controller = new NewVideoController($videoRepository);
-    }
-} elseif ($_SERVER["PATH_INFO"] === "/editar-video") {
-    if ($_SERVER["REQUEST_METHOD"] === "GET") {
-        $controller = new VideoFormController($videoRepository);
-    } elseif ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $controller = new EditVideoController($videoRepository);
-    }
-} elseif ($_SERVER["PATH_INFO"] === "/remover-video") {
-    $controller = new DeleteVideoController($videoRepository);
-} else {
-    $controller = new Error404Controller();
-}
+$controller = new $controllerClass($videoRepository);
 $controller->requestProcess();
