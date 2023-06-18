@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/open-html.php"; ?>
     <body>
+        
     <h1>olá mundo!</h1>
     <h2>Bem vindo ao <b>Videoteca</b></h2>
     <nav>
