@@ -5,3 +5,43 @@
 
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
+body {
+    background-color: #EEEEEE;
+}
+
+header {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid #A4907C;
+    background-color: #FFF1DC;
+}
+
+.navbar {
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: #3A98B9;
+}
+
+.navbar nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 24px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #3A98B9;
+}
+
+.navbar nav ul li a:hover {
+    filter: opacity(0.5);
+}

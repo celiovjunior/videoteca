@@ -2,6 +2,7 @@
 
 use Videoteca\Mvc\Controller\DeleteVideoController;
 use Videoteca\Mvc\Controller\EditVideoController;
+use Videoteca\Mvc\Controller\LoginController;
 use Videoteca\Mvc\Controller\LoginFormController;
 use Videoteca\Mvc\Controller\NewVideoController;
 use Videoteca\Mvc\Controller\VideoFormController;
@@ -15,4 +16,5 @@ return [
     'POST|/editar-video' => EditVideoController::class,
     'GET|/remover-video' => DeleteVideoController::class,
     'GET|/login' => LoginFormController::class,
+    'POST|/login' => LoginController::class,
 ];

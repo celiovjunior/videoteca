@@ -9,9 +9,9 @@ require_once __DIR__ . "/open-html.php"; ?>
                 </div>
                 <nav>
                 <ul>
-                    <li><a href="./novo-video">Novo Video</a></li>
+                    <li><a href="./novo-video">New</a></li>
                     <li><a href="./login">Login</a></li>
-                    <li><a href="./pages/lista-video.html">Criar Conta</a></li>
+                    <li><a href="./pages/lista-video.html">Sign Up</a></li>
                 </ul>
             </nav>
             </div>
@@ -23,8 +23,8 @@ require_once __DIR__ . "/open-html.php"; ?>
                         <h3><?= $video->title ?></h3>
                         <iframe width="703" height="395" src="<?php echo $video->url; ?>" title="<?= $video->title; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                        
                         <div>
-                            <a href="/editar-video?id=<?= $video->id; ?>">Editar</a>
-                            <a href="/remover-video?id=<?= $video->id; ?>">Excluir</a>
+                            <a href="/editar-video?id=<?= $video->id; ?>">Edit</a>
+                            <a href="/remover-video?id=<?= $video->id; ?>">Delete</a>
                         </div>
                     </li>
                 <?php endforeach; ?>
