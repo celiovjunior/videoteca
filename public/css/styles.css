@@ -27,8 +27,11 @@ header {
     justify-content: space-between;
 }
 
-.navbar .logo {
+.navbar .logo a {
     color: #3A98B9;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 28px;
 }
 
 .navbar nav ul {
@@ -99,4 +102,48 @@ section ul .video-box {
 
 .video-box__delete {
     color: #EA5455;
+}
+
+#form {
+    max-width: 1440px;
+    margin: 24px auto;
+}
+
+#form form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+#form h1 {
+    font-size: 24px;
+    color: #413543;
+}
+
+#form form label {
+    margin-top: 16px;
+    color: #413543;
+    font-weight: bold;
+}
+
+#form form input {
+    border: none;
+    height: 3rem;
+    padding: 8px;
+}
+
+#form form .button {
+    width: 200px;
+    background-color: #3A98B9;
+    margin-top: 12px;
+    border-radius: 4px;
+    color: #FFF;
+    font-weight: bold;
+    transition: 200ms;
+}
+
+#form form .button:hover {
+    cursor: pointer;
+    filter: opacity(0.8);
+    border: 5px solid #3A98fe;
 }

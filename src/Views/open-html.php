@@ -11,11 +11,12 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <h1>videoteca.</h1>
+                <a href="/">videoteca.</a>
             </div>
             <nav>
                 <ul>
                     <li><a href="./novo-video">New</a></li>
+                    <li><a href="./">Home</a></li>
                     <li><a href="./login">Login</a></li>
                     <li><a href="./pages/lista-video.html">Sign Up</a></li>
                 </ul>
