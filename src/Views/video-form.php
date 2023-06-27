@@ -4,7 +4,7 @@ require_once __DIR__ . '/open-html.php';
 ?>
     <body>
     <h1>Preencha o formulário a seguir para cadastrar um novo vídeo:</h1>
-    <form  method="post">
+    <form method="post">
         <label for="url">Url do vídeo:</label>
         <input type="url" name="url" value="<?= $video?->url; ?>">
 
