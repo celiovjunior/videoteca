@@ -24,7 +24,7 @@ Web app where the user can **create**, **read**, **update** and **delete** their
 
 - [ ] Login feature/authentication;
 - [ ] Sign Up feature;
-- [ ] Put the project;
+- [ ] [Dockerize]() the project;
 
 ## Running locally
 
@@ -34,10 +34,13 @@ In your favorite terminal, follow the instructions below:
 
 ```bash
 # 1: clone the repository
+git clone git@github.com:celiovjunior/videoteca.git
+
 # 2: install dependencies
+composer install
+
 # 3: start the project
 php -S localhost:8000 -public
-
-# 4: Ctrl+Click the link provided in the terminal
 ```
 
+Project will run at http://localhost:8000
