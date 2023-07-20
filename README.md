@@ -24,7 +24,7 @@ Web app where the user can **create**, **read**, **update** and **delete** their
 
 - [ ] Login feature/authentication;
 - [ ] Sign Up feature;
-- [ ] [Dockerize]() the project;
+- [ ] Dockerize the project;
 
 ## Running locally
 
