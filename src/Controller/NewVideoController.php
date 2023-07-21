@@ -15,6 +15,7 @@ class NewVideoController implements IController
             header('Location: /?success=0');
             return;
         }
+        
         $title = filter_input(INPUT_POST, 'title');
         if ($title === false) {
             header('Location: /?success=0');
