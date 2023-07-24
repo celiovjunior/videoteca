@@ -22,7 +22,7 @@ Web app where the user can **create**, **read**, **update** and **delete** their
 
 ## Features to be added
 
-- [ ] Login feature/authentication;
+- [ ] Login/authentication feature;
 - [ ] Sign Up feature;
 - [ ] Dockerize the project;
 
