@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/open-html.php'; ?>
 
-<div id="form">
+<div id="form" method="POST">
     <h1>Login</h1>
     <p>preencha o formulário abaixo para realizar o login:</p>
     

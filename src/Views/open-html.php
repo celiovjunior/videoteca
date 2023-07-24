@@ -17,8 +17,7 @@
                 <ul>
                     <li><a href="./novo-video">New</a></li>
                     <li><a href="./">Home</a></li>
-                    <li><a href="./login">Login</a></li>
-                    <li><a href="./pages/lista-video.html">Sign Up</a></li>
+                    <li><a href="./login">Log Out</a></li>
                 </ul>
             </nav>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
 namespace Videoteca\Mvc\Controller;
+use PDO;
 
 class LoginController implements IController
 {
@@ -8,8 +9,8 @@ class LoginController implements IController
 
     public function __construct() 
     {
-        $dbPath = __DIR__ . '../../banco.sqlite';
-        $this->pdo = new \PDO("sqlite:$dbPath");
+        $dbPath = __DIR__ . '../../../banco.sqlite';
+        $this->pdo = new PDO("sqlite:$dbPath");
     }
 
     public function requestProcess(): void
