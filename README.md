@@ -15,6 +15,7 @@ Web app where the user can **create**, **read**, **update** and **delete** their
 
 ## User actions
 
+- Can login;
 - Can register a new video;
 - Can update/edit video details;
 - Can delete a video;
@@ -30,7 +31,7 @@ Web app where the user can **create**, **read**, **update** and **delete** their
 
 > Before install the project, make sure you have PHP, Node, GIT and Composer already installed in your computer.
 
-In your favorite terminal, follow the instructions below:
+In your preferable terminal, follow the instructions below:
 
 ```bash
 # 1: clone the repository
